@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <script>
+{% comment %}
+        $(document).ready(function(){
+            $("#b01").click(function(){
+                htmlobj=$.ajax({
+                url:"D:/graduate/urlpachong/taobao.py",
+                async:false
+            });
+            $("#myDiv").html(htmlobj.responseText);
+            });
+            xmlhttp.open("GET","?fname=Bill&lname=Gates",true);
+            xmlhttp.send();
+    });
+{% endcomment %}
+    </script>
+</head>
+<style>
+        html,body{text-align:center;margin:0px auto;}
+</style>
+<body>
+
+<h1>Hello!欢迎光临</h1>
+<hr>
+<form action="/graduate/urlpachong/taobao.py" method="get">
+<div class="search">
+    <input type="text" id="in" name="data1" value="物联网" /><button type="submit" class="btn_search">搜索</button>
+</form>
+</div>
+</body>
+</html>
